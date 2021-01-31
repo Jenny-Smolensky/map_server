@@ -11,8 +11,9 @@ Allow to communicate between two apllications throught a python Flask server.
 ```
   git clone https://github.com/Jenny-Smolensky/map_server.git
 ```
+```
 pip install Flask
-
+```
 
 ##  Requirements
 
