@@ -9,7 +9,7 @@ Allow to communicate between two apllications throught a python Flask server.
 ## Installation instructions
 
 ```
-  git clone https://github.com/Jenny-Smolensky/map_server.git
+git clone https://github.com/Jenny-Smolensky/map_server.git
 ```
 ```
 pip install Flask
