@@ -1,4 +1,6 @@
 import collections
+import re
+
 keys = ['name', 'latitude', 'longitude']
 
 class Marker:
@@ -10,7 +12,6 @@ class Marker:
         self.name = name
 
 
-    # private
     @staticmethod
     def is_valid_double(number):
         if number is None or number is "":
@@ -23,7 +24,7 @@ class Marker:
 
     @staticmethod
     def is_name_valid(name):
-        return True
+        return re.match("[a-zA-Z0-9|-]*", name)
 
     @staticmethod
     def is_lat_valid(lat):
