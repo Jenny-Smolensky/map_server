@@ -3,6 +3,7 @@ import re
 
 keys = ['name', 'latitude', 'longitude']
 
+
 class Marker:
 
     def __init__(self, latitude, longitude, name):
@@ -10,7 +11,6 @@ class Marker:
         self.latitude = latitude
         self.longitude = longitude
         self.name = name
-
 
     @staticmethod
     def is_valid_double(number):
@@ -24,7 +24,9 @@ class Marker:
 
     @staticmethod
     def is_name_valid(name):
-        return re.match("[a-zA-Z0-9|-]*", name)
+
+        _rex = re.compile("[a-z|A-Z|0-9|-]*")
+        return _rex.fullmatch(name)
 
     @staticmethod
     def is_lat_valid(lat):
@@ -62,14 +64,14 @@ class Marker:
             return [False, 'longitude value out of range']
 
         return [True, Marker(float(json_dict['latitude']),
-                      float(json_dict['longitude']),
-                      json_dict['name'])]
+                             float(json_dict['longitude']),
+                             json_dict['name'])]
 
     def to_str(self):
         str = {
-             'latitude': self.latitude,
-             'longitude': self.longitude,
-             'name': self.name,
-         }
+            'latitude': self.latitude,
+            'longitude': self.longitude,
+            'name': self.name,
+        }
         print(str)
         return str
