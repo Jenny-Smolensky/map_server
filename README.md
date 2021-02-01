@@ -4,7 +4,7 @@ Allow to communicate between two apllications throught a python Flask server.
 
 ## The web site is been deployed and is running on
 
-"https://jennysmolensky.pythonanywhere.com/" using python any where 
+https://jennysmolensky.pythonanywhere.com/ using python any where 
 
 ## Installation instructions
 
